@@ -23,7 +23,7 @@ public class TrainingController {
         BookingResponse response = trainingService.bookTraining(trainingId, userId);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
-    
+
     @GetMapping("/users/{userId}/trainings")
     public ResponseEntity<UserTrainingsResponse> getUserTrainings(
             @PathVariable Long userId) {
